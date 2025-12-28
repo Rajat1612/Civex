@@ -946,4 +946,15 @@ section {
 .contact-form textarea {
     min-height: 120px;
 }
+/* Footer contact link visibility fix */
+.footer a {
+  color: #ffffff;            /* White text */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #4da3ff;            /* Soft blue on hover */
+  text-decoration: underline;
+}
 

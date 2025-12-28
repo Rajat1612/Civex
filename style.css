@@ -1052,4 +1052,21 @@ section {
 .contact {
   padding-bottom: 160px;
 }
+.contact-form {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #1e4b7a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
 

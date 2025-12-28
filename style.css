@@ -991,4 +991,65 @@ section {
 .contact-box a:hover {
   text-decoration: underline;
 }
+/* Floating Contact Form Section */
+.contact-form-section {
+  position: relative;
+  margin-top: -120px; /* pulls form upward */
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Form Card */
+.contact-form-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.contact-form-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1a2a44;
+}
+
+/* Inputs */
+.contact-form .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d7e2;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1e88e5;
+}
+
+/* Button */
+.contact-form button {
+  width: 100%;
+  margin-top: 10px;
+}
+.contact {
+  padding-bottom: 160px;
+}
 

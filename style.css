@@ -932,4 +932,18 @@ section {
     text-decoration: underline;
 }
 
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+}
 

@@ -992,13 +992,14 @@ section {
   text-decoration: underline;
 }
 /* Floating Contact Form Section */
+/* Floating Contact Form Section */
 .contact-form-section {
   position: relative;
-  margin-top: -120px; /* pulls form upward */
-  padding-bottom: 80px;
+  margin-top: 0;            /* RESET negative margin */
+  padding: 80px 0;          /* normal spacing */
   display: flex;
   justify-content: center;
-  z-index: 10;
+  z-index: 5;
 }
 
 /* Form Card */
@@ -1068,5 +1069,25 @@ section {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+}
+.contact-background {
+  background: linear-gradient(135deg, #1e4b7a, #16395c);
+  padding: 160px 0 220px;
+  position: relative;
+}
+
+.floating-form {
+  margin-top: -140px;   /* controlled overlap */
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 

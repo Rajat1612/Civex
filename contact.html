@@ -22,6 +22,7 @@
   </div>
 </header>
 
+<!-- CONTACT DETAILS -->
 <section class="contact-info">
   <div class="container">
     <h2>Contact Us</h2>
@@ -43,41 +44,34 @@
 
       <div class="info-box">
         <h4>Contact</h4>
-        <p>📞 +91 82877 01437</p>
-        <p>📧 civextechnicalservices@gmail.com</p>
+        <p>📞 <a href="tel:+918287701437">+91 82877 01437</a></p>
+        <p>📧 <a href="mailto:civextechnicalservices@gmail.com">civextechnicalservices@gmail.com</a></p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT FORM (CENTERED) -->
 <section class="contact-form-section">
   <div class="container">
     <div class="form-card">
       <h3>Send Us a Message</h3>
 
-     <form
-  action="mailto:civextechnicalservices@gmail.com"
-  method="POST"
-  enctype="text/plain"
-  class="contact-form"
->
-  <input type="text" name="Name" placeholder="Your Name" required>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="from_email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <input type="email" name="Email" placeholder="Your Email" required>
-
-  <input type="tel" name="Phone" placeholder="Your Phone Number" required>
-
-  <textarea name="Message" placeholder="Your Message" required></textarea>
-
-  <button type="submit" class="btn-primary">
-    Submit Message
-  </button>
-</form>
-
+        <button type="submit" class="btn-primary">
+          Submit Message
+        </button>
+      </form>
     </div>
   </div>
 </section>
 
+<!-- MAP -->
 <section class="map-section">
   <div class="container">
     <h3>Our Location</h3>
@@ -107,6 +101,33 @@
   />
 </a>
 
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("H0BLh0MO6mmlPTAcg");
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "civex_gmail",
+      "template_fhelief",
+      this
+    ).then(
+      function () {
+        alert("Message sent successfully! We will contact you shortly.");
+        document.getElementById("contact-form").reset();
+      },
+      function (error) {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      }
+    );
+  });
+</script>
+
 </body>
 </html>
-

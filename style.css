@@ -1132,4 +1132,31 @@ section {
   width: 100%;
   margin-top: 10px;
 }
+/* Contact Cards */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Centered Message Form */
+.message-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+.form-center {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Map Section */
+.map-section {
+  padding: 60px 0;
+}
 

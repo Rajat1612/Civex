@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bidder Registration | Civex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">
+      <h1>Civex</h1>
+      <p>Technical Services Pvt. Ltd.</p>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="bidder-registration.html">Bidder Registration</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE INTRO -->
+<section class="services">
+  <div class="container">
+    <h2>Bidder Registration</h2>
+    <p class="section-subtitle">
+      Register with Civex to receive tender support, eligibility assistance, and contract management services.
+    </p>
+  </div>
+</section>
+
+<!-- BIDDER REGISTRATION FORM -->
+<section class="bidder-registration">
+  <div class="container">
+
+    <form id="bidder-form" class="bidder-form">
+
+      <input type="text" name="bidder_name" placeholder="Name of Bidder / Firm" required>
+
+      <select name="firm_type" required>
+        <option value="">Type of Firm</option>
+        <option>Proprietorship</option>
+        <option>Partnership</option>
+        <option>LLP</option>
+        <option>Private Limited Company</option>
+        <option>Public Limited Company</option>
+        <option>Other</option>
+      </select>
+
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+
+      <div class="upload-section">
+        <p><strong>Required Documents (for reference):</strong></p>
+
+        <label class="upload-label">
+          Certificate of Incorporation
+          <input type="file" disabled>
+        </label>
+
+        <label class="upload-label">
+          Aadhaar of Authorized Signatory
+          <input type="file" disabled>
+        </label>
+
+        <label class="upload-label">
+          PAN Card of Firm
+          <input type="file" disabled>
+        </label>
+      </div>
+
+      <p class="form-disclaimer">
+        ⚠️ <strong>Disclaimer:</strong> Document upload functionality is currently disabled on the website.
+        Documents will be collected during onboarding after initial verification.
+      </p>
+
+      <button type="submit" class="btn-primary">
+        Submit Registration
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Civex Technical Services Pvt. Ltd.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+  href="https://wa.me/918287701437"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+  />
+</a>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("H0BLh0MO6mmlPTAcg");
+  })();
+
+  document.getElementById("bidder-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.send("civex_gmail", "template_fhelief", {
+      from_name: this.bidder_name.value,
+      from_email: this.email.value,
+      phone: this.phone.value,
+      message:
+        "Bidder Registration Request\n" +
+        "Firm Type: " + this.firm_type.value
+    }).then(
+      function () {
+        alert("Registration submitted successfully. Our team will contact you shortly.");
+        document.getElementById("bidder-form").reset();
+      },
+      function (error) {
+        alert("Submission failed. Please try again later.");
+        console.error(error);
+      }
+    );
+  });
+</script>
+
+</body>
+</html>

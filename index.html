@@ -7,16 +7,17 @@
   <meta name="keywords" content="contract management, tendering support, construction claims, EOT, payment claims, civil engineering services">
   <title>Civex Technical Services Pvt. Ltd. - Built for Contractors</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link">
-      <img src="civex-logo.jpg" alt="Civex Technical Services Pvt. Ltd.">
+      <img src="civex-logo.jpg" alt="Civex Technical Services Pvt. Ltd." class="logo-img">
     </a>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -31,30 +32,38 @@
       Technical support for tendering, execution, payments, EOT and contract closure —
       focused entirely on private contractors.
     </p>
-    <a href="contact.html" class="btn-primary">Request Consultation</a>
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn-primary">Request Consultation</a>
+      <a href="services.html" class="btn-secondary">View Services</a>
+    </div>
   </div>
 </section>
 
 <!-- WHY US -->
 <section class="why-us">
   <div class="container">
-    <h2>Why Civex?</h2>
-    <div class="cards">
-      <div class="card">
+    <h2>Why Contractors Choose Civex</h2>
+    <p class="section-subtitle">Practical support that protects your commercial interests</p>
+    <div class="cards-grid">
+      <div class="card feature-card">
+        <div class="card-icon">📋</div>
         <h3>Tender Strategy & Bid Support</h3>
-        <p>Expert guidance through the entire tendering process</p>
+        <p>BOQ review, eligibility checks, rate analysis, and winning bid documentation</p>
       </div>
-      <div class="card">
+      <div class="card feature-card">
+        <div class="card-icon">💰</div>
         <h3>Payment & Cash Flow Protection</h3>
-        <p>Safeguard your project finances and cash flow</p>
+        <p>Running bills, payment certification, and cashflow management throughout execution</p>
       </div>
-      <div class="card">
+      <div class="card feature-card">
+        <div class="card-icon">⏰</div>
         <h3>EOT & Claims Assistance</h3>
-        <p>Professional support for extensions and claims</p>
+        <p>Delay analysis, EOT submissions, variation claims, and dispute avoidance</p>
       </div>
-      <div class="card">
+      <div class="card feature-card">
+        <div class="card-icon">✅</div>
         <h3>Contract Close-Out Support</h3>
-        <p>Smooth project completion and final settlements</p>
+        <p>Final bills, reconciliation, claims settlement, and clean project handover</p>
       </div>
     </div>
   </div>
@@ -63,26 +72,49 @@
 <!-- SERVICES PREVIEW -->
 <section class="services-preview">
   <div class="container">
-    <h2>Our Core Services</h2>
-    <p class="section-subtitle">
-      Practical contract and commercial support throughout the project lifecycle.
-    </p>
-    <div class="cards">
-      <div class="card">
+    <div class="section-header">
+      <h2>Complete Project Lifecycle Support</h2>
+      <p class="section-subtitle">
+        From tender submission to final payment certification
+      </p>
+    </div>
+    <div class="cards-grid">
+      <div class="card service-card">
         <h3>Tendering Support</h3>
         <p>BOQ review, quantity checks, rate analysis, bid documentation and tender strategy.</p>
       </div>
-      <div class="card">
+      <div class="card service-card">
         <h3>Execution & Contract Administration</h3>
         <p>Measurement verification, variation tracking, correspondence and commercial control.</p>
       </div>
-      <div class="card">
+      <div class="card service-card">
         <h3>Payments, EOT & Claims</h3>
         <p>Running bills, final bills, payment follow-up, EOT and contractual claims support.</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top:30px;">
-      <a href="services.html" class="btn-primary">View All Services</a>
+    <div class="cta-center">
+      <a href="services.html" class="btn-primary large">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="trust-section">
+  <div class="container">
+    <h2>Trusted by Contractors</h2>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Tenders Supported</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">₹100Cr+</div>
+        <div class="stat-label">Claims Recovered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Projects Closed</div>
+      </div>
     </div>
   </div>
 </section>
@@ -90,32 +122,24 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-grid">
-    <div>
+    <div class="footer-brand">
       <h4>Civex Technical Services Pvt. Ltd.</h4>
-      <p>Built for Contractors.</p>
+      <p>Built for Contractors. By Civil Engineers.</p>
+      <p><strong>+91 82877 01437</strong> | info@civextechnicalservices.com</p>
     </div>
-    <div>
+    <div class="footer-links">
       <h4>Quick Links</h4>
-      <a href="index.html">Home</a><br>
-      <a href="services.html">Services</a><br>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
-  <p class="copyright">© 2025 Civex Technical Services Pvt. Ltd.</p>
+  <div class="copyright">© 2025 Civex Technical Services Pvt. Ltd. All rights reserved.</div>
 </footer>
 
 <!-- WHATSAPP FLOATING BUTTON -->
-<a
-  href="https://wa.me/918287701437"
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Chat on WhatsApp"
->
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-    alt="WhatsApp"
-  />
+<a href="https://wa.me/918287701437" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
 </body>
 </html>

@@ -25,7 +25,7 @@
 </header>
 
 <!-- REGISTRATION HERO -->
-<section class="hero bidder-hero">
+<section class="hero contractor-hero">
 <div class="container">
 <h1>Contractor Registration</h1>
 <p class="hero-subtitle">Register your firm to access exclusive tender support, bid assistance and commercial management services</p>
@@ -33,18 +33,18 @@
 </section>
 
 <!-- REGISTRATION FORM -->
-<section class="bidder-registration">
+<section class="contractor-registration">
 <div class="container">
-<div class="form-card bidder-form-card">
+<div class="form-card contractor-form-card">
 <h2>Complete Registration Form</h2>
 <p style="text-align: center; color: #666; margin-bottom: 2rem;">
 All fields are mandatory. Certificate upload recommended for verification.</p>
 
-<form id="bidder-form" class="bidder-form">
+<form id="contractor-form" class="contractor-form">
 <div class="form-row">
 <div class="form-group">
-<label>Name of Bidder *</label>
-<input type="text" name="bidder_name" required>
+<label>Name of contractor *</label>
+<input type="text" name="contractor_name" required>
 </div>
 <div class="form-group">
 <label>Firm Name *</label>
@@ -132,7 +132,7 @@ Already registered? <a href="contact.html" style="color: #1e40af; font-weight: 5
 </a>
 
 <script>
-document.getElementById('bidder-form').addEventListener('submit', function(e) {
+document.getElementById('contractor-form').addEventListener('submit', function(e) {
   e.preventDefault();
   const formData = new FormData(this);
   const submitBtn = this.querySelector('button[type="submit"]');

@@ -79,3 +79,36 @@ nav a.active, nav a:hover { color: #f59e0b; border-bottom: 2px solid #f59e0b; }
   .cta-buttons, .hero-buttons { flex-direction: column; align-items: center; }
   .btn-primary, .btn-secondary { width: 100%; max-width: 300px; }
 }
+/* WHATSAPP FIX - PERFECT EVERYWHERE */
+.whatsapp-float {
+  position: fixed !important;
+  width: 60px !important;
+  height: 60px !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background: #25d366 !important;
+  border-radius: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4) !important;
+  z-index: 9999 !important;
+  transition: transform 0.3s !important;
+}
+.whatsapp-float img {
+  width: 36px !important;
+  height: 36px !important;
+  filter: brightness(0) invert(1) !important; /* White icon */
+}
+.whatsapp-float:hover {
+  transform: scale(1.1) !important;
+}
+
+/* Services/Contact page override */
+.services .whatsapp-float,
+.contact .whatsapp-float,
+.hero-services .whatsapp-float,
+.cta-section .whatsapp-float {
+  bottom: 30px !important;
+  right: 30px !important;
+}

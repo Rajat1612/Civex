@@ -321,21 +321,446 @@ nav a:hover, nav a.active {
     margin: 0 0.5rem;
   }
   /* CONTRACTOR REGISTRATION */
-.bidder-hero {
+.contractor-hero {
   padding: 6rem 0;
 }
 
-.bidder-registration {
+.contractor-registration {
   padding: 5rem 0;
   background: #f8fafc;
 }
 
-.bidder-form-card {
+.contractor-form-card {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.bidder-form {
+.contractor-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1e40af;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.upload-section {
+  border: 2px dashed #cbd5e1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  background: #f8fafc;
+  transition: all 0.3s;
+}
+
+.upload-section:hover {
+  border-color: #1e40af;
+  background: #eff6ff;
+}
+
+.upload-label {
+  cursor: pointer;
+  font-weight: 500;
+  color: #1e40af;
+  font-size: 1rem;
+}
+
+.form-disclaimer {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #1e40af;
+}
+
+.full-width.btn-primary {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo h1 {
+  color: #1e40af;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #1e40af;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background: #f59e0b;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.btn-primary:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #1e40af;
+}
+
+/* SECTIONS */
+.why-us, .services-preview {
+  padding: 5rem 0;
+  background: white;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #f0f4ff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.3rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.service-card {
+  text-align: left;
+}
+
+.cta-center {
+  display: block;
+  max-width: 250px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+/* CONTACT FORM SECTION */
+.contact-info {
+  padding: 5rem 0;
+  background: white;
+}
+
+.contact-form-section {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.info-box {
+  background: #f0f4ff;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.info-box h3 {
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.map-link {
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.form-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1e40af;
+}
+
+/* FOOTER */
+.footer {
+  background: #1e293b;
+  color: white;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer h4 {
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: #94a3b8;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}
+
+/* WHATSAPP FLOATING BUTTON - 100% UNCHANGED */
+.whatsapp-float {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 60px !important;
+  height: 60px !important;
+  background-color: #25D366 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+  z-index: 999 !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.whatsapp-float svg {
+  width: 36px !important;
+  height: 36px !important;
+  fill: white !important;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) !important;
+  background-color: #20ba5a !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav a {
+    margin: 0 0.5rem;
+  }
+  /* CONTRACTOR REGISTRATION */
+.contractor-hero {
+  padding: 6rem 0;
+}
+
+.contractor-registration {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+
+.contractor-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contractor-form {
   display: grid;
   gap: 1.5rem;
 }

@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Civex</title>
+  <meta name="description" content="Contact Civex Technical Services for professional contract and commercial support. Get in touch for tendering, execution, payment and contract closure assistance.">
+  <meta name="keywords" content="contact civex, construction support services, contract management contact, tendering support delhi">
+  <title>Contact Us | Civex Technical Services</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
-    <div class="logo">
-      <h1>Civex</h1>
-      <p>Technical Services Pvt. Ltd.</p>
-    </div>
+    <a href="index.html" class="logo-link">
+      <img src="civex-logo" alt="Civex Technical Services" class="logo-img">
+    </a>
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -25,44 +26,52 @@
 <!-- CONTACT DETAILS -->
 <section class="contact-info">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Reach out for tendering, execution, payment and contract closure support.</p>
-
+    <h1>Contact Us</h1>
+    <p class="section-subtitle">Reach out for tendering, execution, payment and contract closure support.</p>
+    
     <div class="info-grid">
       <div class="info-box">
-        <h4>Office Address</h4>
+        <h3>Office Address</h3>
         <p>
           Civex Technical Services Pvt. Ltd.<br>
           1/9631, Pratap Pura,<br>
           Behel Gali No. 4,<br>
           Shahdara, Delhi – 110032
         </p>
-        <a href="https://maps.google.com/?q=1/9631+Pratap+Pura+Shahdara+Delhi" target="_blank">
-          View on Google Maps
+        <a href="https://maps.google.com/?q=1/9631+Pratap+Pura+Shahdara+Delhi" target="_blank" rel="noopener noreferrer" style="color: #1f3c88; font-weight: 500;">
+          📍 View on Google Maps
         </a>
       </div>
-
+      
       <div class="info-box">
-        <h4>Contact</h4>
-        <p>📞 <a href="tel:+918287701437">+91 82877 01437</a></p>
-        <p>📧 <a href="mailto:civextechnicalservices@gmail.com">civextechnicalservices@gmail.com</a></p>
+        <h3>Contact Information</h3>
+        <p>📞 <a href="tel:+918287701437" style="color: #1f3c88; text-decoration: none;">+91 82877 01437</a></p>
+        <p>📧 <a href="mailto:civextechnicalservices@gmail.com" style="color: #1f3c88; text-decoration: none;">civextechnicalservices@gmail.com</a></p>
+      </div>
+      
+      <div class="info-box">
+        <h3>Business Hours</h3>
+        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+        Saturday: 9:00 AM - 2:00 PM<br>
+        Sunday: Closed</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT FORM (CENTERED) -->
+<!-- CONTACT FORM -->
 <section class="contact-form-section">
   <div class="container">
     <div class="form-card">
-      <h3>Send Us a Message</h3>
-
+      <h2>Send Us a Message</h2>
+      <p style="text-align: center; color: #666; margin-bottom: 20px;">
+        Fill out the form below and we'll get back to you as soon as possible.
+      </p>
       <form id="contact-form" class="contact-form">
-        <input type="text" name="from_name" placeholder="Your Name" required>
-        <input type="email" name="from_email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-
+        <input type="text" name="from_name" placeholder="Your Name *" required>
+        <input type="email" name="from_email" placeholder="Your Email *" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number *" required>
+        <textarea name="message" rows="5" placeholder="Your Message *" required></textarea>
         <button type="submit" class="btn-primary">
           Submit Message
         </button>
@@ -74,18 +83,33 @@
 <!-- MAP -->
 <section class="map-section">
   <div class="container">
-    <h3>Our Location</h3>
+    <h2 style="text-align: center; margin-bottom: 30px; color: #1f3c88;">Our Location</h2>
     <iframe
       src="https://www.google.com/maps?q=1/9631%20Pratap%20Pura%20Shahdara%20Delhi%20110032&output=embed"
-      width="100%" height="350" style="border:0;" loading="lazy">
+      width="100%" 
+      height="400" 
+      style="border:0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
+      loading="lazy"
+      allowfullscreen>
     </iframe>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <p>© 2025 Civex Technical Services Pvt. Ltd.</p>
+  <div class="container footer-grid">
+    <div>
+      <h4>Civex Technical Services Pvt. Ltd.</h4>
+      <p>Built for Contractors.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><br>
+      <a href="services.html">Services</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
+  <p class="copyright">© 2025 Civex Technical Services Pvt. Ltd.</p>
 </footer>
 
 <!-- WhatsApp Floating Button -->
@@ -93,6 +117,7 @@
   href="https://wa.me/918287701437"
   class="whatsapp-float"
   target="_blank"
+  rel="noopener noreferrer"
   aria-label="Chat on WhatsApp"
 >
   <img
@@ -103,15 +128,20 @@
 
 <!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
 <script>
   (function () {
     emailjs.init("H0BLh0MO6mmlPTAcg");
   })();
-
+  
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
-
+    
+    // Disable button during submission
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+    
     emailjs.sendForm(
       "civex_gmail",
       "template_fhelief",
@@ -120,14 +150,17 @@
       function () {
         alert("Message sent successfully! We will contact you shortly.");
         document.getElementById("contact-form").reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       },
       function (error) {
         alert("Failed to send message. Please try again later.");
         console.error(error);
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       }
     );
   });
 </script>
-
 </body>
 </html>

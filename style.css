@@ -594,29 +594,50 @@ nav a.active {
   }
 }
 /* ========================================
-   LOGO SIZE FIX - MAKE 3X LARGER
+   CIVEX LOGO - 5X LARGER FOR TALL DESIGN
    ======================================== */
 .logo-img {
-  width: 180px !important;  /* 3x typical size */
-  height: 60px !important;  /* Perfect aspect ratio */
-  object-fit: contain;      /* Keeps logo crisp */
-  max-width: 200px;         /* Responsive max */
+  width: 280px !important;     /* 5x larger - perfect for your tall logo */
+  height: 100px !important;    /* Maintains sharp proportions */
+  object-fit: contain;
+  max-width: 300px;
 }
 
-@media (max-width: 768px) {
-  .logo-img {
-    width: 140px !important;  /* Slightly smaller on mobile */
-    height: 48px !important;
-  }
+/* Header height adjustment for big logo */
+.header {
+  padding: 1rem 0;
+  min-height: 120px;  /* Extra space for tall logo */
 }
 
-/* Header container adjustment for larger logo */
 .header-flex {
   align-items: center;
-  gap: 2rem;  /* Space between logo and nav */
+  gap: 3rem;
+  min-height: 100px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
+
+/* Mobile - still prominent */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 220px !important;   /* Large even on mobile */
+    height: 80px !important;
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+

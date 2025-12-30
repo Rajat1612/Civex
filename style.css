@@ -64,10 +64,35 @@ nav a.active, nav a:hover { color: #f59e0b; border-bottom: 2px solid #f59e0b; }
 .footer a { color: #fff; text-decoration: none; }
 .copyright { text-align: center; color: #cbd5e1; padding-top: 2rem; border-top: 1px solid #475569; }
 
-/* WHATSAPP */
-.whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background: #25d366; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 1000; transition: transform 0.3s; }
-.whatsapp-float:hover { transform: scale(1.1); }
-.whatsapp-float img { width: 35px; height: 35px; }
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float {
+  position: fixed !important;
+  width: 60px !important;
+  height: 60px !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  background: #25d366 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.5) !important;
+  z-index: 9999 !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.whatsapp-float svg {
+  width: 36px !important;
+  height: 36px !important;
+  fill: white !important;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 6px 25px rgba(37,211,102,0.6) !important;
+  background: #20ba5a !important;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -78,37 +103,17 @@ nav a.active, nav a:hover { color: #f59e0b; border-bottom: 2px solid #f59e0b; }
   .form-row { grid-template-columns: 1fr; }
   .cta-buttons, .hero-buttons { flex-direction: column; align-items: center; }
   .btn-primary, .btn-secondary { width: 100%; max-width: 300px; }
-}
-/* WHATSAPP FIX - PERFECT EVERYWHERE */
-.whatsapp-float {
-  position: fixed !important;
-  width: 60px !important;
-  height: 60px !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  background: #25d366 !important;
-  border-radius: 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.4) !important;
-  z-index: 9999 !important;
-  transition: transform 0.3s !important;
-}
-.whatsapp-float img {
-  width: 36px !important;
-  height: 36px !important;
-  filter: brightness(0) invert(1) !important; /* White icon */
-}
-.whatsapp-float:hover {
-  transform: scale(1.1) !important;
-}
-
-/* Services/Contact page override */
-.services .whatsapp-float,
-.contact .whatsapp-float,
-.hero-services .whatsapp-float,
-.cta-section .whatsapp-float {
-  bottom: 30px !important;
-  right: 30px !important;
+  
+  /* WhatsApp button responsive */
+  .whatsapp-float {
+    width: 55px !important;
+    height: 55px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+  
+  .whatsapp-float svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }

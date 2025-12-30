@@ -1,140 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Comprehensive technical and commercial support services for contractors - tendering, contract management, payments, EOT, and claims assistance.">
-  <meta name="keywords" content="contract management services, tendering support, EOT assistance, construction claims, payment support">
-  <title>Services | Civex Technical Services</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-flex">
-    <a href="index.html" class="logo-link">
-      <img src="civex-logo" alt="Civex Technical Services" class="logo-img">
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+/* ========================================
+   SERVICES PAGE STYLES - ADD THESE LAST
+   ======================================== */
 
-<!-- SERVICES INTRO -->
-<section class="services">
-  <div class="container">
-    <h1>Our Services</h1>
-    <p class="section-subtitle">
-      Comprehensive technical and commercial support for contractors across the entire contract lifecycle.
-    </p>
-    
-    <!-- MAIN SERVICES -->
-    <div class="service-box">
-      <h2>Tendering Support</h2>
-      <p>
-        Complete bid assistance including BOQ review, eligibility checks,
-        bid strategy development, and tender documentation support.
-      </p>
-    </div>
-    
-    <div class="service-box">
-      <h2>Contract Management</h2>
-      <p>
-        Practical contract administration support to protect contractor interests
-        during project execution and day-to-day operations.
-      </p>
-    </div>
-    
-    <div class="service-box">
-      <h2>Payment & EOT Support</h2>
-      <p>
-        Preparation and follow-up of running bills, final bills,
-        Extension of Time (EOT) submissions, and contractual justifications.
-      </p>
-    </div>
-    
-    <div class="service-box">
-      <h2>Claims & Contract Closure</h2>
-      <p>
-        Support for contractual claims, final bill reconciliation,
-        and clean closure of contracts upon project completion.
-      </p>
-    </div>
-  </div>
-</section>
+/* Hero Services */
+.hero-services { 
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
+  color: white; 
+  padding: 6rem 0; 
+  text-align: center;
+}
+.hero-services h1 { 
+  font-size: clamp(2.5rem, 5vw, 4rem); 
+  margin-bottom: 1rem; 
+  font-weight: 700;
+}
+.hero-subtitle { 
+  font-size: 1.3rem; 
+  max-width: 600px; 
+  margin: 0 auto 2rem; 
+  opacity: 0.95;
+}
 
-<!-- HOW WE SUPPORT CONTRACTORS -->
-<section class="services-detailed">
-  <div class="container">
-    <h2>How We Support Contractors</h2>
-    <div class="service-steps">
-      <div class="step-card">
-        <h3>Pre-Contract Stage</h3>
-        <p>
-          We assist contractors during tendering by reviewing BOQs, identifying risks,
-          checking eligibility criteria, and preparing technically compliant submissions.
-        </p>
-      </div>
-      
-      <div class="step-card">
-        <h3>Execution Stage</h3>
-        <p>
-          During execution, we support contract administration, measurements,
-          variations, correspondence, and commercial tracking to safeguard contractor interests.
-        </p>
-      </div>
-      
-      <div class="step-card">
-        <h3>Payment & Time Management</h3>
-        <p>
-          We help contractors manage running bills, payment follow-ups,
-          EOT documentation, and delay justifications under contract provisions.
-        </p>
-      </div>
-      
-      <div class="step-card">
-        <h3>Claims & Closure</h3>
-        <p>
-          At project completion, we assist in claims preparation,
-          final bill settlement, reconciliation, and smooth contract closure.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+/* Primary CTA */
+.cta-primary { 
+  background: #f59e0b; 
+  color: white; 
+  padding: 1rem 2.5rem; 
+  border-radius: 50px; 
+  font-weight: 600; 
+  text-decoration: none; 
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(245,158,11,0.4);
+  transition: all 0.3s ease;
+}
+.cta-primary:hover { 
+  background: #d97706; 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 25px rgba(245,158,11,0.5);
+}
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>Civex Technical Services Pvt. Ltd.</h4>
-      <p>Built for Contractors.</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <a href="index.html">Home</a><br>
-      <a href="services.html">Services</a><br>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-  <p class="copyright">© 2025 Civex Technical Services Pvt. Ltd.</p>
-</footer>
+/* Services Grid */
+.services-grid-section {
+  padding: 5rem 0;
+}
+.services-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 2rem; 
+  margin-top: 3rem;
+}
+.service-card { 
+  background: white; 
+  padding: 2.5rem 2rem; 
+  border-radius: 12px; 
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+  border-top: 4px solid #3b82f6;
+  transition: all 0.3s ease;
+}
+.service-card:hover { 
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.service-icon { 
+  font-size: 3rem; 
+  margin-bottom: 1rem; 
+  text-align: center;
+}
+.service-card h3 { 
+  color: #1e293b; 
+  margin-bottom: 1rem; 
+  font-size: 1.4rem;
+}
+.service-card ul { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0 0 1.5rem; 
+}
+.service-card li { 
+  padding: 0.5rem 0; 
+  position: relative; 
+  padding-left: 1.5rem; 
+}
+.service-card li:before { 
+  content: "✓"; 
+  color: #10b981; 
+  font-weight: bold; 
+  font-size: 1.1rem;
+  position: absolute; 
+  left: 0; 
+}
+.service-cta { 
+  background: #3b82f6; 
+  color: white; 
+  padding: 0.75rem 1.5rem; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-weight: 500; 
+  display: inline-block;
+  transition: background 0.3s;
+}
+.service-cta:hover { background: #2563eb; }
 
-<!-- WHATSAPP FLOATING BUTTON -->
-<a
-  href="https://wa.me/918287701437"
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Chat on WhatsApp"
->
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-    alt="WhatsApp"
-  />
-</a>
-</body>
-</html>
+/* Process Section */
+.process-section {
+  background: #f8fafc;
+  padding: 5rem 0;
+}
+.process-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2rem; 
+  margin-top: 3rem;
+}
+.process-step { 
+  text-align: center; 
+  padding: 2rem;
+}
+.step-number { 
+  width: 60px; 
+  height: 60px; 
+  background: #f59e0b; 
+  color: white; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin: 0 auto 1.5rem;
+}
+
+/* CTA Section */
+.cta-section { 
+  background: #f8fafc; 
+  padding: 5rem 0; 
+  text-align: center;
+}
+.cta-buttons { 
+  gap: 1rem; 
+  margin-top: 2rem; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+.cta-secondary { 
+  background: transparent; 
+  color: #3b82f6; 
+  border: 2px solid #3b82f6; 
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cta-secondary:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Active Nav */
+nav a.active { 
+  color: #f59e0b; 
+  border-bottom: 2px solid #f59e0b; 
+  padding-bottom: 0.5rem;
+}
+
+/* Container & Responsive */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-services, .services-grid-section, .process-section, .cta-section {
+    padding: 3rem 1rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-primary, .cta-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}

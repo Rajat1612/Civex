@@ -148,3 +148,44 @@ nav a {
 .whatsapp-float:hover {
   transform: scale(1.05);
 }
+/* Bidder Registration Page */
+.bidder-registration {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.bidder-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+.bidder-form input,
+.bidder-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.upload-section {
+  background: #f7f9fc;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.upload-label {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #666;
+}
+
+.upload-label input {
+  display: none;
+}
+
+.form-disclaimer {
+  font-size: 13px;
+  color: #888;
+}

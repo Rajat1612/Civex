@@ -593,3 +593,30 @@ nav a.active {
     text-align: center;
   }
 }
+/* ========================================
+   LOGO SIZE FIX - MAKE 3X LARGER
+   ======================================== */
+.logo-img {
+  width: 180px !important;  /* 3x typical size */
+  height: 60px !important;  /* Perfect aspect ratio */
+  object-fit: contain;      /* Keeps logo crisp */
+  max-width: 200px;         /* Responsive max */
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 140px !important;  /* Slightly smaller on mobile */
+    height: 48px !important;
+  }
+}
+
+/* Header container adjustment for larger logo */
+.header-flex {
+  align-items: center;
+  gap: 2rem;  /* Space between logo and nav */
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}

@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contractor Registration | Civex</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contractor Registration | Civex</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("H0BLh0MO6mmlPTAcg"); // Public Key
+    })();
+  </script>
 </head>
 <body>
 
@@ -22,71 +30,47 @@
   </div>
 </header>
 
-<section class="registration-section">
+<section class="contact-form-section">
   <div class="container">
-    <div class="registration-card">
+    <div class="form-card">
 
-      <h2>contractor Registration</h2>
-      <p class="form-subtitle">
+      <h3>Contractor Registration</h3>
+      <p class="form-subtext">
         Register to receive tender support, bid guidance and contract advisory services.
       </p>
 
-      <form id="contractorForm">
+      <form id="contractorForm" class="contact-form">
 
-        <div class="form-group">
-          <label>Name of contractor *</label>
-          <input type="text" name="name" required>
+        <input type="text" name="name" placeholder="Name of Contractor *" required />
+
+        <input type="text" name="firm_name" placeholder="Firm Name *" required />
+
+        <select name="firm_type" required>
+          <option value="">Type of Firm *</option>
+          <option>Proprietorship</option>
+          <option>Partnership</option>
+          <option>Private Limited</option>
+          <option>LLP</option>
+          <option>Others</option>
+        </select>
+
+        <input type="tel" name="phone" placeholder="Mobile Number *" required />
+
+        <input type="email" name="email" placeholder="Email Address *" required />
+
+        <textarea name="address" placeholder="Firm Address *" required></textarea>
+
+        <div class="form-note">
+          📌 <strong>Note:</strong> Document uploads (Incorporation, Aadhaar, PAN)
+          will be requested separately after initial verification.
         </div>
 
-        <div class="form-group">
-          <label>Firm Name *</label>
-          <input type="text" name="firm_name" required>
-        </div>
+        <label class="checkbox">
+          <input type="checkbox" required />
+          I confirm that the information provided is accurate.
+        </label>
 
-        <div class="form-group">
-          <label>Type of Firm *</label>
-          <select name="firm_type" required>
-            <option value="">Select Firm Type</option>
-            <option>Proprietorship</option>
-            <option>Partnership</option>
-            <option>Private Limited</option>
-            <option>LLP</option>
-            <option>Joint Venture</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Mobile Number *</label>
-          <input type="tel" name="phone" required>
-        </div>
-
-        <div class="form-group">
-          <label>Email Address *</label>
-          <input type="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label>Firm Address *</label>
-          <textarea name="address" rows="3" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label>Certificate of Incorporation (Optional)</label>
-          <input type="file" disabled>
-          <small class="note">
-            Uploads will be enabled in the next phase.  
-            For now, documents may be shared on request.
-          </small>
-        </div>
-
-        <div class="form-checkbox">
-          <input type="checkbox" required>
-          <span>
-            I confirm that the information provided is accurate.
-          </span>
-        </div>
-
-        <button type="submit" class="btn-primary full-width">
+        <button type="submit" class="btn-primary">
           Submit Registration
         </button>
 
@@ -106,40 +90,34 @@
   </div>
 </footer>
 
-<!-- EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  emailjs.init("H0BLh0MO6mmlPTAcg");
-
-  document.getElementById("contractorForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.send("civex_gmail", "template_83zt2b7", {
-      name: this.name.value,
-      firm_name: this.firm_name.value,
-      firm_type: this.firm_type.value,
-      phone: this.phone.value,
-      email: this.email.value,
-      address: this.address.value
-    })
-    .then(() => {
-      alert("Registration submitted successfully. We will contact you shortly.");
-      this.reset();
-    }, () => {
-      alert("Submission failed. Please try again later.");
-    });
-  });
-</script>
-<!-- WHATSAPP FLOATING BUTTON - EXACT COPY -->
-<a
-href="https://wa.me/918287701437"
-class="whatsapp-float"
-target="_blank"
-aria-label="Chat on WhatsApp"
->
-<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 0C7.164 0 0 7.164 0 16C0 18.777 0.722 21.396 2.022 23.664L0.098 30.906L7.597 29.021C9.771 30.181 12.308 30.844 15.016 30.844C23.852 30.844 31.016 23.68 31.016 14.844C31.016 10.571 29.376 6.593 26.407 3.624C23.438 0.655 19.46 0.015 16 0ZM16.016 2.859C18.945 2.859 21.695 3.993 23.782 6.079C25.868 8.165 27.001 10.915 27.001 13.844C27.001 21.695 20.867 28.001 13.016 28.001C10.574 28.001 8.249 27.337 6.22 26.126L5.704 25.829L2.251 26.751L3.188 23.407L2.86 22.876C1.524 20.774 0.844 18.352 0.844 15.844C0.844 8.009 7.18 1.859 15.016 1.859H16.016ZM10.482 8.321C10.247 8.321 9.841 8.415 9.497 8.805C9.153 9.195 8.154 10.133 8.154 12.04C8.154 13.946 9.528 15.79 9.716 16.04C9.904 16.29 12.247 20.024 15.888 21.602C18.857 22.868 19.529 22.602 20.248 22.54C20.967 22.477 22.56 21.633 22.904 20.758C23.248 19.883 23.248 19.133 23.154 18.977C23.06 18.821 22.81 18.727 22.435 18.539C22.06 18.352 20.154 17.414 19.81 17.29C19.466 17.165 19.216 17.102 18.966 17.477C18.716 17.852 18.013 18.727 17.794 18.977C17.575 19.227 17.357 19.258 16.982 19.071C16.607 18.883 15.388 18.493 13.935 17.196C12.794 16.18 12.013 14.93 11.794 14.555C11.575 14.18 11.771 13.977 11.935 13.79C12.091 13.633 12.279 13.415 12.467 13.196C12.654 12.977 12.716 12.821 12.841 12.571C12.966 12.321 12.904 12.102 12.81 11.915C12.716 11.727 11.966 9.805 11.654 9.071C11.341 8.337 11.029 8.415 10.81 8.399C10.591 8.383 10.341 8.383 10.091 8.383L10.482 8.321Z" fill="white"/>
-</svg>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918287701437" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+
+<script>
+document.getElementById("contractorForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.send("civex_gmail", "template_fhelief", {
+    name: this.name.value,
+    firm_name: this.firm_name.value,
+    firm_type: this.firm_type.value,
+    phone: this.phone.value,
+    email: this.email.value,
+    message: this.address.value
+  }).then(
+    function() {
+      alert("Registration submitted successfully. Our team will contact you.");
+      document.getElementById("contractorForm").reset();
+    },
+    function(error) {
+      alert("Submission failed. Please try again later.");
+      console.error(error);
+    }
+  );
+});
+</script>
+
 </body>
 </html>

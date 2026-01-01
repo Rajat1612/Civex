@@ -100,13 +100,15 @@ document.getElementById("contractorForm").addEventListener("submit", function(e)
   e.preventDefault();
 
   emailjs.send("civex_gmail", "template_fhelief", {
-    name: this.name.value,
-    firm_name: this.firm_name.value,
-    firm_type: this.firm_type.value,
-    phone: this.phone.value,
-    email: this.email.value,
-    address: this.address.value   // ✅ FIXED
-  }).then(
+  form_type: "Contractor Registration",
+  name: this.name.value,
+  firm_name: this.firm_name.value,
+  firm_type: this.firm_type.value,
+  phone: this.phone.value,
+  email: this.email.value,
+  address: this.address.value
+});
+then(
     function() {
       alert("Registration submitted successfully. Our team will contact you.");
       document.getElementById("contractorForm").reset();

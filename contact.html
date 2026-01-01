@@ -98,31 +98,36 @@ Fill out the form below and we'll get back to you as soon as possible.
 </a>
 
 <!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-(function () {
+(function() {
   emailjs.init("H0BLh0MO6mmlPTAcg");
 })();
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
+
+  const btn = this.querySelector("button");
+  btn.disabled = true;
+  btn.innerText = "Sending...";
 
   emailjs.send("civex_gmail", "template_fhelief", {
     form_type: "Contact Enquiry",
     name: this.from_name.value,
     email: this.from_email.value,
     phone: this.phone.value,
-    firm_name: "",
-    firm_type: "",
     message: this.message.value
   })
   .then(() => {
     alert("Message sent successfully.");
     this.reset();
+    btn.disabled = false;
+    btn.innerText = "Submit Message";
   })
   .catch(err => {
-    alert("Failed to send message.");
+    alert("Failed to send. Please try again.");
     console.error(err);
+    btn.disabled = false;
+    btn.innerText = "Submit Message";
   });
 });
 </script>

@@ -848,3 +848,37 @@ nav a:hover, nav a.active {
     font-size: 2rem;
   }
 }
+.form-subtext {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 15px;
+}
+
+.contact-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 15px;
+}
+
+.form-note {
+  background: #f8f9fb;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.checkbox {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.form-footer {
+  margin-top: 15px;
+  font-size: 14px;
+}

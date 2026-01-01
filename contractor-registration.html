@@ -98,14 +98,14 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-(function () {
+(function(){
   emailjs.init("H0BLh0MO6mmlPTAcg");
 })();
 
-  document.getElementById("contractorForm").addEventListener("submit", function (e) {
+document.getElementById("contractorForm").addEventListener("submit", function(e){
   e.preventDefault();
+
   emailjs.send("civex_gmail", "template_fhelief", {
     form_type: "Contractor Registration",
     name: this.name.value,
@@ -113,14 +113,15 @@
     phone: this.phone.value,
     firm_name: this.firm_name.value,
     firm_type: this.firm_type.value,
-    message: this.address.value
+    address: this.address.value,
+    message: "New contractor registration submitted"
   })
   .then(() => {
     alert("Registration submitted successfully.");
     this.reset();
   })
   .catch(err => {
-    alert("Registration failed.");
+    alert("Registration failed. Please try again.");
     console.error(err);
   });
 });

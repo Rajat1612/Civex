@@ -109,13 +109,13 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   const originalText = submitBtn.textContent;
   submitBtn.textContent = "Sending...";
   submitBtn.disabled = true;
-  emailjs.sendForm("civex_gmail", "template_fhelief", this).then(
-    function() {
-      alert("Message sent successfully! We will contact you shortly.");
-      document.getElementById("contact-form").reset();
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    },
+emailjs.send("civex_gmail", "template_fhelief", {
+  form_type: "Contact Enquiry",
+  name: this.name.value,
+  email: this.email.value,
+  phone: this.phone.value,
+  message: this.message.value
+});
     function(error) {
       alert("Failed to send message. Please try again later.");
       console.error(error);

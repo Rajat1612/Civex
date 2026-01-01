@@ -105,15 +105,15 @@ document.getElementById("contractorForm").addEventListener("submit", function(e)
     firm_type: this.firm_type.value,
     phone: this.phone.value,
     email: this.email.value,
-    message: this.address.value
+    address: this.address.value   // ✅ FIXED
   }).then(
     function() {
       alert("Registration submitted successfully. Our team will contact you.");
       document.getElementById("contractorForm").reset();
     },
     function(error) {
+      console.error("EmailJS Error:", error);
       alert("Submission failed. Please try again later.");
-      console.error(error);
     }
   );
 });
